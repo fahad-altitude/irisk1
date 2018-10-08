@@ -89,14 +89,8 @@
     <plugin name="com-sarriaroman-photoviewer" spec="^1.1.18" />
     <plugin name="cordova-sqlite-storage" spec="^2.4.0" />
     <plugin name="cordova-plugin-document-viewer" spec="^0.9.10" />
-<<<<<<< HEAD
     <engine name="android" spec="~7.0.0" />
     <plugin name="cordova-plugin-telerik-imagepicker" spec="~2.2.2">
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="for help desk" />
-=======
-    <engine name="android" spec="7.0.0" />
-    <plugin name="cordova-plugin-telerik-imagepicker" spec="^2.2.2">
-        <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="your usage message" />
->>>>>>> 339cb165da610ab80d14dab47d4f814f99654c82
     </plugin>
 </widget>
