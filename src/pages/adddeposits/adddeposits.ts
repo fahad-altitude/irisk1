@@ -1,20 +1,11 @@
 import { Component } from '@angular/core';
 import {NavController, NavParams, Platform, AlertController, LoadingController, App, ModalController } from 'ionic-angular';
-// import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
-// import { File } from '@ionic-native/file';
 import { RestProvider } from '../../providers/rest/rest';
 import { DepositsPage } from '../deposits/deposits';
-// import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Http} from '@angular/http';
-// import { normalizeURL } from 'ionic-angular';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
-<<<<<<< HEAD
-import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
-
-=======
->>>>>>> origin/master
 // @IonicPage()
 @Component({
   selector: 'page-adddeposits',
@@ -29,14 +20,10 @@ public reason:any;
 public amount:any;
 public headers:any;
 public imageurl=[];
-slideOneForm: FormGroup;
 public burlimg: any;
 public burl: any;
 public base64Image:any;
 submitAttempt: boolean = false;
-imagebag = []; //for normal url
-imagebag64 = []; // for base64 img for front end preview
-imagebagname = []; //for image name
 subscription: any;
 slotdates:any;
 content:any;
