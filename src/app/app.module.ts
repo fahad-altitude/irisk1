@@ -50,11 +50,10 @@ import { RestProvider } from '../providers/rest/rest';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
-import { CallNumber } from '@ionic-native/call-number';
-import { ImagePicker } from '@ionic-native/image-picker';
 import { IonicStorageModule } from '@ionic/storage';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { DocumentViewer } from '@ionic-native/document-viewer';
+import { ImagePicker } from '@ionic-native/image-picker';
 
 @NgModule({
   declarations: [
@@ -160,10 +159,10 @@ import { DocumentViewer } from '@ionic-native/document-viewer';
     Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestProvider,
-    CallNumber,
-    ImagePicker,
     PhotoViewer,
-    DocumentViewer
+    DocumentViewer,
+    ImagePicker
+
   ]
 })
 export class AppModule {}
