@@ -82,7 +82,7 @@
       "cordova-plugin-file-transfer": {},
       "mx.ferreyra.callnumber": {},
       "cordova-plugin-telerik-imagepicker": {
-        "PHOTO_LIBRARY_USAGE_DESCRIPTION": "your usage message"
+        "PHOTO_LIBRARY_USAGE_DESCRIPTION": "for help desk"
       },
       "cordova-plugin-filepath": {},
       "cordova-sqlite-storage": {},

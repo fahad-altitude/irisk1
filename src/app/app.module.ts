@@ -53,12 +53,7 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { CallNumber } from '@ionic-native/call-number';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { IonicStorageModule } from '@ionic/storage';
-import { FilePath } from '@ionic-native/file-path';
-import { File } from '@ionic-native/file';
-import { Base64 } from '@ionic-native/base64';
-import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
-import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { DocumentViewer } from '@ionic-native/document-viewer';
 
 @NgModule({
@@ -167,13 +162,6 @@ import { DocumentViewer } from '@ionic-native/document-viewer';
     RestProvider,
     CallNumber,
     ImagePicker,
-    FilePath,
-    File,
-    Base64,
-    FileTransfer,
-    FileTransferObject,
-    File,
-    Base64ToGallery,
     PhotoViewer,
     DocumentViewer
   ]

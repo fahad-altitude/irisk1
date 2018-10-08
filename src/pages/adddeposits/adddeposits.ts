@@ -93,12 +93,8 @@ save_deposit(){
   
   }
   showdepositalert(des)
-{
-  let alert = this.alertCtrl.create({
-		
-   // subTitle: "Alert!",
+{   let alert = this.alertCtrl.create({
     message: des,
-  //  message: "<ion-item><p style='overflow:auto;white-space:normal;'>Test</p> <button ion-button outline item-right icon-left (click)='itemSelected()'><ion-icon name='eye'></ion-icon>View</button>",
     buttons: [
          {
            text: 'Close',
@@ -107,14 +103,10 @@ save_deposit(){
            }
          }
        ]
-   });
-                 
+   });  
    alert.present();
-
 }
 camerafn(){
-  
-  console.log("camera settings");
   const options: CameraOptions = {
     quality: 100,
     destinationType: this.camera.DestinationType.DATA_URL,
@@ -127,46 +119,11 @@ camerafn(){
     this.myimage = imagePath;
     this.showimg=imagePath;
     this.myimage = 'data:image/jpeg;base64,' + imagePath;
-    console.log('this.imgurl', this.myimage);
   }, (err) => {
   });
 }
 click_on_cancel_button(){
   this.navCtrl.pop();
 }
-// uploadimg(){
-//   this.userid=window.localStorage.getItem('token');
-//   console.log('upload img funtion::::',this.userid);
-//     const fileTransfer: FileTransferObject = this.transfer.create();
-//     let options: FileUploadOptions = {
-//       fileKey: 'image-file',
-//       fileName: this.userid+'.png',
-//       chunkedMode: false,
-//       mimeType: "image/png",
-//       headers: {}
-//     }
-//     console.log('this.imageURI ::: sadsd:',this.myimage);
-//     console.log('options',options);
-//     this.urlpic='http://staging.irisk.my/assets/uploads/deposit_files/deposit_receipts/';
-//     // +this.userid+'.png'
-//     console.log('this.imageURI ::::',this.urlpic);
-//     fileTransfer.upload(this.myimage, this.urlpic, options)
-//       .then((data) => {
-//       let p_data = JSON.parse(data.response);
-//       console.log('responseeesdadsaee:::: thenthen',p_data);
-//       if(p_data.code==404){
-//       console.log('responseeesdadsaee:::: ifif',p_data);
-//       }
-//       else{
-//         console.log(p_data);
-//         this.myimage='';
-//         console.log('responseeesdadsaee:::: elseelse',p_data);
-//       }
-//     }, (err) => {
-//       console.log(err);
-//       console.log('The image cannot be uploaded. Please try again.',err);
-//     });
-//   // });
-// }
 slideData = [{ image: "../../assets/imgs/1.jpg" },{ image: "../../assets/imgs/1.jpg" }] 
 }
