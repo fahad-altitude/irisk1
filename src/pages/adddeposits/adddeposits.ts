@@ -3,7 +3,6 @@ import {NavController, NavParams, Platform, AlertController, LoadingController, 
 import { RestProvider } from '../../providers/rest/rest';
 import { DepositsPage } from '../deposits/deposits';
 import { Http} from '@angular/http';
-import { ImagePicker } from '@ionic-native/image-picker';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
 // @IonicPage()
@@ -33,8 +32,7 @@ showimg:any;
 constructor(
   public navCtrl: NavController, 
   public navParams: NavParams,
-  private camera: Camera, 
-  private imagePicker: ImagePicker,  
+  private camera: Camera,  
   private photoViewer: PhotoViewer,
   public platform: Platform,
   public alertCtrl: AlertController, 
