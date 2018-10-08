@@ -67,6 +67,13 @@
       "cordova-plugin-camera": {},
       "cordova-plugin-file": {},
       "cordova-plugin-file-transfer": {},
+<<<<<<< HEAD
+=======
+      "mx.ferreyra.callnumber": {},
+      "cordova-plugin-telerik-imagepicker": {
+        "PHOTO_LIBRARY_USAGE_DESCRIPTION": "your usage message"
+      },
+>>>>>>> 339cb165da610ab80d14dab47d4f814f99654c82
       "cordova-plugin-filepath": {},
       "cordova-sqlite-storage": {},
       "com-sarriaroman-photoviewer": {},
