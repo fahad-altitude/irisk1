@@ -1,0 +1,33 @@
+page-servicesdetailvendor {
+    .service_detail_row{
+        padding: 10px;
+    }
+    ion-row.service_detail_row1.row {
+        background: white;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    ion-row.service_detail_row2.row {
+        padding: 10px;
+    }
+    ion-col.service_detail_col2.col {
+        background: white;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    p.para1 {
+        font-size: 17px;
+        font-weight: 700;
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid;
+    }
+    p.para2 {
+        color: darkslategrey;
+    }
+    ion-col.service_detail_col1.col p {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+}

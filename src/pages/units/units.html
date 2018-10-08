@@ -1,0 +1,25 @@
+<ion-content  padding style="background-image: url(assets/imgs/2.jpg);background-size: 100% 100%;background-repeat: no-repeat;background-position: center;">
+  <div class="bg">
+   <ion-grid>
+    <ion-row style="padding-top: 100px;">
+      <ion-col col-1></ion-col>
+      <ion-col col-10 class="community" padding>
+        <div class="logo">
+          <img src="assets/imgs/ic_logo_menu_m.png">
+          <p>Select your unit</p>
+        </div>
+        <ion-select placeholder="Select" [(ngModel)]="unit_id" interface="popover">
+          <ion-option value="-1" selected="true">Select </ion-option>
+          <ion-option  *ngFor="let item of units_list; let i = index " value="{{item.unit_id}}" selected="i === 0">{{item.unit_name}}</ion-option>
+        </ion-select>
+        <div id="butn" style="padding-top: 10px">
+        <button ion-button class="next_btn" full   (click)="go_to_dashboard()">Next</button>
+        <button ion-button class="next_btn" full   (click)="go_back()" style=" box-shadow: none;background-color: transparent !important;">Back</button>
+        <!-- <p style="text-align:center;color:white" (click)="go_back()"></p> -->
+        </div>
+      </ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+   </ion-grid>
+  </div>
+ </ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title color="white" class="mytitle">Ticket Detail</ion-title>
+    </ion-navbar>
+    
+  </ion-header>
+  <ion-content style="background:#eaeaea;" >
+    <div class="helpticket" >
+      <p><span class="span1">Ticket No.</span> <span class="span2">{{detail_ticket.ticket_number}}</span></p>
+      <p><span class="span1">Category</span> <span class="span2">{{detail_ticket.category}}</span></p>
+      <p><span class="span1">Status</span><span class="span2"><button ion-button>{{detail_ticket.status}}</button></span></p>
+    </div>
+    <div class="segment_tab">
+        <ion-segment [(ngModel)]="helpdesk">
+            <ion-segment-button value="messages">
+                Messages
+            </ion-segment-button>
+            <ion-segment-button value="details">
+                Details
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+    <div [ngSwitch]="helpdesk">
+        <ion-list *ngSwitchCase="'messages'">
+            <div class="notidd" >
+                <div class="notidetail1"   *ngFor="let com of comments_list;" >
+                    <img src="{{com.comment_by_image}}" alt="" style="float: left;padding-right: 20px;width:57px;height:57px">
+                    <p>{{com.commented_by}}</p>
+                    <div  [innerHtml]="com.comment" style="color: #969596;"></div>
+                </div>
+            </div>
+            <div class="notireplyy">
+                <div class="col_7" >
+                    <ion-input placeholder="Comment Here......." clearInput></ion-input>
+                </div>
+                <div class="col_1"><img src="../../assets/imgs/reply1.png" alt=""></div>
+                <div class="col_1"><img src="../../assets/imgs/reply3.png" alt=""></div>
+                <div class="col_3"><button ion-button><img src="../../assets/imgs/reply2.png" alt=""></button></div>
+            </div>
+        </ion-list>
+        <ion-list *ngSwitchCase="'details'">
+            <div class="notidd">
+                <div class="notidetail">
+                    <div  [innerHtml]="detail_ticket.description"></div> 
+                    <p *ngIf="images_list">
+                        Attachments:
+                    </p>
+                    <ion-row >
+                    <ion-col col-4 class="padr padl0"  *ngFor="let im of images_list;" >
+                        <img src="{{im.image_url}}"   (click)="showbigimage(im.image_url,detail_ticket.id)"  alt="" style="height: 75px;">
+                    </ion-col>
+                    
+                    </ion-row>
+                </div>
+            </div>
+        </ion-list>
+        
+    </div>
+  </ion-content>

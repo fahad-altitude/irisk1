@@ -1,0 +1,60 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.border{
+    border:none;
+    border-bottom: none;
+}
+
+.list-md[no-lines] .item-block, .list-md[no-lines] ion-item-options, .list-md[no-lines] .item .item-inner {
+    border-width: 0;
+    color: white;
+}
+.menutop .menu-inner {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.90) !important;
+}
+ion-content.menucontent {
+    background-color: transparent;
+}
+.menutop ion-content.menucontent .scroll-content {
+    background-color: transparent;
+}
+ion-list.menulist {
+    background-color: transparent;
+}
+ion-list.menulist p{
+    background-color: transparent;
+    color: white;
+}
+ion-list.menulist p {
+    margin: 0;
+    padding: 5px 20px 5px 5px;
+}
+ion-list.menulist .items{
+    float: left;
+    width: 100%;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+ion-list.menulist .items p{
+    float: right;
+}
+ion-list.menulist .items img{
+    float: right;
+}
+

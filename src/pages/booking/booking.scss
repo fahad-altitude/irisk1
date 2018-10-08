@@ -1,0 +1,70 @@
+page-booking {
+.booking_top{
+    width: 100%;
+    border-bottom: 1px solid;
+}
+.booking_top p{
+    width: 70%;
+    float: left;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+.mytitle{
+    margin-left:18%;
+}
+.scroll-content {
+    background: #e8e8e8;
+}
+.booking_top button{
+    width:30%;
+    float: right;
+    
+    color: white;
+    margin: 0;
+    border-radius: 10px;
+    font-size: 12px;
+    height: auto;
+    padding: 8px;
+    margin-top: 10px;
+}
+.booking_mid{
+    width: 100%;
+}
+.booking_mid p{
+    width: 50%;
+    float: left;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: darkgrey;
+    font-weight: 700;
+}
+.booking_end{
+    width: 100%;
+}
+.booking_end p{
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: darkgrey;
+}
+.booking{
+    background: white;
+    padding: 5px 5px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 20px -1px grey;
+}
+.plusicon {
+    position: absolute;
+    right: 20px;
+    top: -70px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    text-align: center;
+    display: table-cell;
+    background: #108223;
+    vertical-align: middle;
+    border-radius: 50px;
+}
+}
+

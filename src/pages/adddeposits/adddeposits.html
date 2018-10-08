@@ -1,0 +1,44 @@
+<ion-header >
+    <ion-navbar color="dark">
+    <ion-title color="white" class="mytitle">Add deposit</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding style="background-color:#EEEEEE">
+    <p class="txt-color"><b>Purpose Of Deposit:</b></p>
+    <input type="text" [(ngModel)]="reason" placeholder="Enter Purpose Of Deposit" style="padding: 7px;width: 100%;border: none;border-bottom: 1px solid #6D6D6D !important;background: transparent" >    
+    <br>
+    <p class="txt-color"><b>Amount:</b></p>
+    <input type="number" [(ngModel)]="amount" placeholder="Enter Amount" style="padding: 7px;width: 100%;border: none;border-bottom: 1px solid #6D6D6D !important;background: transparent" >
+    <div class="file" style="background:white;margin-top: 20px;">
+        <ion-grid >
+            <ion-row (click)="camerafn()">
+                <ion-col col-8>
+                    <p class="txt-color"><b>Choose File:</b></p>
+                </ion-col>
+                <ion-col col-4>
+                <ion-icon  name="attach" class="txt-color" style="padding-left: 0px;font-size: 34px;transform: rotate(-45deg);text-align: right;float: right;padding-right: 15px;"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <div class="text">
+        <div *ngIf="imgurl!=''">
+                <!-- <img  [src]="showimg"  alt="" width="80px" height="80px" imageViewer > -->
+                <img src="{{this.myimage}}" alt="" width="80px" height="80px" imageViewer >
+        </div>
+    <p style="color:#108223;font-style:italic;padding-top: 0;font-size: 16px;"> &nbsp;Note:Upload Bank transfer recepit only.</p>
+    </div>
+    <ion-buttons>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6>
+
+                    <button (click)="click_on_cancel_button()" ion-button color="graish" block outline class="txt-color">CANCEL</button>
+                </ion-col>
+                <ion-col col-6>
+                    <button  ion-button full  class="savbtn" (click)="save_deposit()">SAVE TO DEPOSIT</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-buttons>
+</ion-content>

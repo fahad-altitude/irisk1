@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title color="white" text-center>Offers and Promos</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-row class="service_detail_row" >
+    <ion-col col-12 class="service_detail_col">
+      <img src="{{this.path}}{{this.image}}" alt="">
+    </ion-col>
+  </ion-row>
+  <ion-row class="service_detail_row2">
+    <ion-col col-12 class="service_detail_col2">
+      <p class="para1">{{this.title}}</p>
+      <p class="para2" [innerHtml]="this.description"></p>
+     
+    </ion-col>
+  </ion-row>
+</ion-content>

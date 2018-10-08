@@ -1,0 +1,235 @@
+page-depositedetail {
+    .slidr{
+        width: 100%;
+        // height: 25%;
+        height: 175px;
+        background:url('assets/imgs/2.png');
+        // margin-bottom: 10px;
+        }
+        
+        .box{
+        background-color:white;
+        width: 122px;
+        height: 83px;
+        margin-left: -5px;
+        margin-right: 5px;
+        }
+        .bx{
+        background-color: white;
+        margin-right: 5px;
+        
+        }
+        .ox{
+        background-color: white;
+        margin-right:-5px;
+        }
+        .rw{
+        margin-top: 5px;
+        }
+        
+        .menu{
+        height: 55%;
+        width: 100%;
+        }
+        .mytitle{
+          
+            margin-left: 16%;
+        }
+        .add-favicon{
+            margin-left: 392%;
+            margin-top: 576%;
+            background-color: #108223;
+        }
+        .plusicon {
+            position: absolute;
+            right: 20px;
+            top: -70px;
+            width: 50px;
+            height: 50px;
+            padding: 5px;
+            text-align: center;
+            display: table-cell;
+            background: #108223;
+            vertical-align: middle;
+            border-radius: 50px;
+        }
+        ion-content ion-row{
+            background: white;
+            margin-bottom: 10px;
+        }
+        ion-content ion-row ion-col{
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+        ion-content ion-row ion-col p.info{
+            font-size: 15px;
+            font-weight: 700;
+            margin: 5px;
+            margin-right: 0;
+            color: #444;
+            width: 68%;
+            float: left;
+            overflow-wrap: break-word;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            // word-break: break-all;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+        ion-content ion-row ion-col p.info span{
+            float: right;
+            font-size: 14px;
+            color: #339e45;
+            font-weight: bolder;
+            margin-top: 0px;
+        }
+        .noti_btn{
+            height: auto;
+            padding: 10px 15px;
+            font-size: 15px !important;
+            background: #e74f5b !important;
+            margin: 0;
+            margin-top: 0;
+        }
+        .noti_btn1{
+            height: auto;
+            padding: 10px 15px;
+            font-size: 15px !important;
+            background: #f53d3d !important;
+            margin: 0;
+            margin-top: 0;
+        }
+        .noti_btn2{
+            height: auto;
+            padding: 10px 15px;
+            font-size: 15px !important;
+            background: #108223 !important;
+            margin: 0;
+            margin-top: 0;
+        }
+        .noti_btn3{
+            height: auto;
+            padding: 10px 15px;
+            font-size: 15px !important;
+            background: #488aff !important;
+            margin: 0;
+            margin-top: 0;
+        }
+        .para2{
+            margin: 0;
+            margin-top: 5px !important;
+            margin-bottom:5px;
+        }
+        .para2 span{
+            padding-left: 5px;
+            font-size: 14px;
+        }
+        .noti_icon_btn{
+            height: auto;
+            width: 15px;
+            height: 15px;
+            border-radius: 10px; 
+            float: right;
+            margin: 2px !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            background: #515256;
+        }
+        .noti_icon_btn span{
+            padding: 0;
+        }
+        .noti_icon_btn span ion-icon{
+            font-size: 10px;    
+            margin-top: -1px;        
+        }
+
+
+
+        .top_recipt p {
+            margin: 0;
+            color: white;
+            font-weight: 700;
+        }
+        .top_recipt {
+            background: #108223;
+            padding: 20px;
+        }
+        .top_recipt p.para1 {
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+        }
+        .top_recipt p.para2 {
+            font-size: 22px;
+            font-weight: 500 !important;
+        }
+        .depositdetail{
+            background: white;
+            padding: 20px;
+            margin-top: 10px;
+            float: left;
+            width: 100%;
+        }
+        .user_info{
+            border-bottom: 1px solid grey;
+            padding-bottom: 10px;
+        }
+        .user_info p.para2 {
+            color: grey;
+        }
+        .user_info p {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 5px;
+        }
+        .user_detail {
+            border-bottom: 1px solid grey;
+            float: left;
+            width: 100%;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .user_detail p {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .userdetailbox{
+            float: left;
+            width: 100%;
+        }
+        .userdetailbox p{
+            width: 50%;
+            float: left;
+            margin: 5px 0;
+        }
+        .date_paid {
+            float: left;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid grey;
+        }
+        .date_paid p {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 5px;
+        }
+        .date_paid p.para2 {
+            color: grey;
+        }
+        .attachment {
+            float: left;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            // border-bottom: 1px solid grey;
+        }
+        .attachment p {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 5px;
+        }
+
+        
+}

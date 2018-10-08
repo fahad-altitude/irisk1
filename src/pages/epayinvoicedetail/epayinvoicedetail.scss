@@ -1,0 +1,120 @@
+page-epayinvoicedetail {
+        .top_recipt p {
+            margin: 0;
+            color: white;
+            font-weight: 700;
+        }
+        .mytitle{
+            margin-left:15%;
+        }
+        .top_recipt {
+            background: #09a546;
+            padding: 20px;
+        }
+        .top_recipt p.para1 {
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+        }
+        .top_recipt p.para2 {
+            font-size: 16px;
+            font-weight: 500 !important;
+        }
+        .Statusinvoice {
+            background: white;
+            padding: 5px 5px;
+            margin-top: 10px;
+            float: left;
+            width: 100%;
+        }
+        .Statusinvoice p{
+            font-size: 13px;
+            color: grey;
+            font-style: italic;
+            margin: 0;
+        }
+        .Statusinvoice button{
+            padding: 10px 15px;
+            border-radius: 10px;
+            height: auto;
+            font-size: 12px;
+            box-shadow: none;
+        }
+        .invoicerow{
+            padding: 10px 5px;
+        }
+        .user_info p.para2 {
+            color: grey;
+        }
+        .invoicep1{
+            margin: 0;
+            padding-bottom: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            border-bottom: 1px solid #eaeaea;
+    
+        }
+        .invoicep2{
+            margin: 0;
+            padding: 10px 0 5px 0;
+            font-size: 13px;
+            color: rgb(78, 75, 75);
+            font-style: italic;
+        }
+        .user_info {
+            float: left;
+            width: 100%;
+            background: white;
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+        .invoicedate {
+            float: left;
+            width: 50%;
+            font-size: 16px;
+            
+     padding-bottom: 15px;
+        }
+        .invoicedate p {
+            margin: 0;
+            padding: 5px;
+        }
+        .invoicedate p.para1 {
+            color: 09a546;
+        }
+        .invoicedate p.para2 {
+            color: gray;
+        }
+        .user_info p {
+            float: left;
+            width: 100%;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 5px 0;
+        }
+        .paymenthistory {
+            width: 100%;
+            float: left;
+            padding: 10px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .paymenthistory .p1{
+            color: white;
+            background: #4c4a4a;
+            padding-left: 10px;
+            font-weight: 300;
+            
+        }
+        .paymenthistory .p2{
+            color: #4c4a4a;
+        }
+        .paymenthistory .p3{
+            color: #4c4a4a;
+        }
+        .paymenthistory .p3 span{
+            float: right;
+            color: black;
+        }
+
+}

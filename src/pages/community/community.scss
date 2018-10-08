@@ -1,0 +1,71 @@
+page-community {
+  .community{
+    // background-color: rgb(33,33,27);
+    // opacity: 0.8;
+    background-color: rgba(33, 33, 27, 0.82);
+    border-radius: 5px;
+    margin-top: 17%;
+  }
+  .logo{
+    text-align: center;
+  }
+  .logo img{
+    text-align: center;
+    padding-top:25px;
+  }
+  .logo p{
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    line-height: 30px;
+    font-weight: 300;
+  }
+  ion-select{
+    width: 100%;
+    max-width: 100%;
+    padding: 12px !important;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: left;
+    background: #e0e0e0 !important;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .next_btn,.next_btn:hover{
+    text-transform: none;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #d9544f !important;
+  }
+ 
+}
+.popover-content {
+  width: 232px !important;
+  margin-top: 47px;
+  border-radius: 0 !important;
+}
+.popover-arrow {
+  display: none !important;
+}
+// ion-radio {
+//   display: none !important;
+// }
+.item-radio-checked.item-ios ion-label {
+  color: #000;
+}
+.popover-content ion-list > .item-block:first-child {
+  display: none;
+}
+.radio-icon.radio-checked {
+  display: none;
+}
+.radio-icon {
+  display: none !important;
+}
+.item-radio-checked.item-md ion-label {
+  color: #000;
+}
+.popover-ios .popover-content {
+  width: 240px !important;
+  margin-top: 0;
+}

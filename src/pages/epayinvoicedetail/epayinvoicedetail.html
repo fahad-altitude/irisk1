@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title color="white" class="mytitle">Invoice Details</ion-title>
+    </ion-navbar>
+    <div class="top_recipt">
+      <p class="para1">
+        REF#{{this.post_id}} 
+      </p>
+      <p class="para2">Amount Due &nbsp;&nbsp;&nbsp;{{this.invoice_deail.net_total_amount}}</p>
+    </div>
+  </ion-header>
+  <ion-content style="background:#eaeaea;">
+      <div class="Statusinvoice">
+        <ion-col col-6 float-left>
+            <button *ngIf="this.invoice_deail.Invoice_status=='UNPAID'" style=" background: red;" ion-button >{{this.invoice_deail.Invoice_status}}</button>
+            <button *ngIf="this.invoice_deail.Invoice_status=='PAID'" style=" background: #09a546;" ion-button >{{this.invoice_deail.Invoice_status}}</button>
+        </ion-col>
+        <ion-col col-6 float-left>
+            <p text-right style="margin-top: 10px;"><a (click)="view_pdf(this.invoice_deail.pdf_link)" ><img src="../../assets/imgs/pdficon.png" alt=""  width="20px"></a></p>
+        </ion-col>
+      </div>
+      <div class="user_info">
+          <div class="invoicedate">
+              <p class="para1">Invoice Date</p>
+              <p class="para2">{{this.item_deail.date_created | date:'dd-MM-yyyy'}}</p>
+          </div>
+          <div class="invoicedate">
+              <p class="para1">Due Date</p>
+              <p class="para2">{{this.item_deail.due_date | date:'dd-MM-yyyy'}}</p>
+          </div>
+        <div style="background: #eaeaea; float: left; width: 100%;    padding: 10px;">
+            <p class="para1">{{this.item_deail.resident_name}}</p>
+            <p class="para2">{{this.invoice_deail.condo_address}} </p>
+        </div>
+        <div  *ngFor="let inv of this.invoice_deail.items_list;"  float-left style="padding-top: 15px;padding-bottom: 15px;border-bottom: 1px solid grey;width: 100%;">
+            <p style="width: 70%;float: left;">{{inv.name_with_date}} </p>
+            <p style="width: 30%;float: left;text-align: right;">{{inv.amount}}</p>
+        </div>
+
+            <p text-right  style="padding-top: 15px;padding-bottom: 15px;border-bottom: 1px solid #eaeaea;;background-color:#eaeaea;width: 55%;margin-left: 45%;margin-bottom: 9px;margin-top: 5px;">TOTAL &nbsp;&nbsp;{{this.invoice_deail.items_list_total_amount}}</p><br>
+            <p  text-right  style="padding-top: 15px;padding-bottom: 15px;border-bottom: 1px solid #eaeaea;background-color:#eaeaea;width: 55%;margin-left: 45%;margin-bottom: 9px;">DISCOUNT &nbsp;&nbsp;{{this.invoice_deail.discount}}</p><br>
+            <p   text-right  style="padding-top: 15px;padding-bottom: 15px;border-bottom: 1px solid grey;background-color:grey;width: 55%;margin-left: 45%;margin-bottom: 9px;">NET TOTAL &nbsp;&nbsp;{{this.invoice_deail.net_total_amount}}</p>
+
+        <button ion-button  *ngIf="this.invoice_deail.Invoice_status=='UNPAID'" float-right style="color:white;background:#09a546;margin-top:10px;margin-bottom: 10px; padding-top: 15px;padding-bottom: 15px;border-bottom: 1px solid grey;padding: 10px">PAY NOW</button>
+        <div class="paymenthistory"  *ngIf="this.invoice_deail.Invoice_status=='PAID'">
+            <p class="p1">Payment History</p>
+            <ion-row class="invoicerow"  *ngFor="let pay of this.invoice_deail.invoice_payment_history;"  >
+                <ion-col col-12 class="invoicecol" (click)="invoicedetail(inv.id)">
+                    <p class="invoicep1">ID#{{pay.system_transaction_id}} <span  float-right >{{pay.amount_paid}}</span></p>
+                    <p class="invoicep2"><ion-icon name="md-card" ></ion-icon> {{pay.payment_channel_name}}</p>
+                </ion-col>
+            </ion-row> 
+        </div>
+      </div>
+</ion-content>

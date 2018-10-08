@@ -1,0 +1,68 @@
+page-bookingaddselection {
+    .scroll-content {
+        background: #e8e8e8;
+    }
+    ion-row.row.booking_detail {
+        background: white;
+        padding: 10px 10px;
+    }
+    ion-row.row.booking_detail ion-col p{
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: grey;
+    }
+    .mytitle{
+        margin-left:8%;
+    }
+    ion-row.row.booking_detail ion-col p span{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        color: #444;
+    }
+    ion-row.row.booking_avail {
+        background: white;
+        padding: 10px 10px;
+        margin-top: 15px;
+    }
+    ion-row.row.booking_avail ion-col p{
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: #565555;
+        padding: 10px 0px;
+        background: #eaeaea;
+        border-radius: 5px;
+        text-align: center;
+    }
+    ion-row.row.booking_avail ion-col h3{
+        margin: 0;
+        font-size: 18px;
+        font-weight: 300;
+        color: rgb(0, 0, 0);
+    }
+    .booking_buttons .button2{
+        color: white;
+        background:#09a546;
+    }
+    .booking_buttons .button1{
+        color: #9c9b9c;
+        border:1px solid #9c9b9c;
+        background: transparent;
+    }
+    ion-select{
+        width: 100%;
+        max-width: 100%;
+        padding: 12px !important;
+        border-radius: 5px;
+        text-align: left;
+        background: #fff !important;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .booking_select{
+        margin: 10px 0;
+    }
+
+}

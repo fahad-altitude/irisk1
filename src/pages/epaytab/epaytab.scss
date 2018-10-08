@@ -1,0 +1,71 @@
+page-epaytab {
+    .segment_tab{
+        padding: 0;
+        width: 100%;
+        height: 50px;
+    }
+    .segment_tab ion-segment {
+        height: 50px;
+        background: grey;
+        color: black;
+    }
+    .segment_tab ion-segment .segment-button {
+        height: 50px !important;
+        color: black !important;
+        font-size: 13px !important;
+        font-weight: bold;
+        padding: 12px;
+        border: 0 !important;
+        line-height: 27px;
+    }
+    .segment_tab ion-segment .segment-button.segment-activated {
+        background: #09a546 !important;
+        color: white !important;
+    }
+    .currentout{
+        font-size: 16px;
+        font-weight: 700;
+        padding: 20px;
+        margin: 0;
+        background: red;
+        color: white;
+        margin-top: 10px;
+    }
+    .invoicep1{
+        margin: 0;
+        padding-bottom: 8px;
+        font-size: 15px;
+        font-weight: 700;
+        border-bottom: 1px solid grey;
+
+    }
+    .mytitle{
+      
+        margin-left:28%;
+    }
+    .invoicep2{
+        margin: 0;
+        padding: 10px 0 5px 0;
+        font-size: 13px;
+        color: rgb(78, 75, 75);
+        font-style: italic;
+    }
+    .invoicep3{
+        margin: 0;
+        padding: 5px 0;
+        font-size: 15px;
+        color: grey;
+        font-style: italic;
+    }
+    .invoicerow{
+        padding: 5px 5px 0 5px;
+    }
+    .invoicecol{
+        padding: 10px 15px;
+        background: white;
+        border-radius: 5px;
+    }
+    ion-col.invoicecol.col {
+        margin-bottom: 5px;
+    }
+}

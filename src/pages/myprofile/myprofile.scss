@@ -1,0 +1,49 @@
+page-myprofile {
+    font-family: 'Montserrat', sans-serif;
+.profiletop{
+    background: black;
+    padding: 20px 0;
+}
+.profiletop .profileimg img{
+    width: 100px;
+}
+.profileimg{
+    text-align: right;
+}
+ion-col.profileinfo.col p {
+    color: white;
+}
+p.para1 {
+    font-size: 24px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+p.para2{
+    font-size: 13px;
+    img{
+        float: left;
+        padding-right: 10px;
+    }
+} 
+.toolbar-background {
+    border: 0 !important;
+}
+.toolbar {
+    min-height: auto !important;
+}
+ion-list {
+    margin-bottom: 5px !important;
+}
+.scroll-content {
+    background: #eaeaea;
+}
+ion-thumbnail img{
+    width: 45px !important;
+    height:45px !important;
+}
+ion-thumbnail {
+    min-width: 40px !important;
+    min-height: 40px !important;
+}
+}

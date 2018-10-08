@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <ion-title color="white" class="mytitle">e-Pay</ion-title>
+  </ion-navbar>
+  <div class="segment_tab">
+  <ion-segment [(ngModel)]="epay">
+      <ion-segment-button value="invoices">
+          Invoices
+      </ion-segment-button>
+      <ion-segment-button value="payments">
+          Payments
+      </ion-segment-button>
+  </ion-segment>
+  </div>
+</ion-header>
+<ion-content style="background:#eaeaea;">
+  <div [ngSwitch]="epay">
+      <ion-list *ngSwitchCase="'invoices'" >
+        <p class="currentout" *ngIf="this.outstanding!=0 && this.outstanding!='' ">Current Outstanding <span float-right>{{this.currency}}{{this.outstanding}}</span></p>
+          <ion-row class="invoicerow" *ngFor="let inv of invoices_list;" >
+              <ion-col col-12 class="invoicecol" (click)="invoicedetail(inv.id)">
+                <p class="invoicep1">Ref#{{inv.id}} <span *ngIf="inv.invoice_number!=null">({{inv.invoice_number}})</span> <span *ngIf="inv.invoice_status=='UNPAID'" float-right style="color:red;">{{this.currency}}{{inv.balance_due}}</span></p>
+                <p class="invoicep2"><ion-icon name="md-calendar" ></ion-icon> Due: {{inv.due_date}}</p>
+                <p class="invoicep3" *ngIf="inv.invoice_status=='UNPAID'">Status: <span style="color:red;">{{inv.invoice_status}}</span></p>
+                <p class="invoicep3" *ngIf="inv.invoice_status=='PAID'">Status: <span style="color:#108223;">{{inv.invoice_status}}</span></p>
+              </ion-col>
+          </ion-row>
+          <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+            <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."></ion-infinite-scroll-content>
+          </ion-infinite-scroll>
+          <div *ngIf="noneresult==true"> 
+            <p style=" width: 100%; text-align: center; display: block; padding-top:10px;"><ion-icon name="md-warning" style="color:#108223;font-size: 48px;"></ion-icon></p>
+        <p style="color: #000000; width: 100%; text-align: center; display: block; padding-top:5px; font-size:16px;font-weight:bold;">You have no invoices</p>
+        </div>
+      </ion-list>
+      <ion-list *ngSwitchCase="'payments'">
+          <ion-row class="invoicerow" *ngFor="let pays of payments_list;" >
+              <ion-col col-12 class="invoicecol" (click)="paymentdetail(pays.id)">
+                <p class="invoicep1">Ref#{{pays.system_transaction_id}} <span float-right>{{this.currency}}{{pays.payment_amount}}</span></p>
+                <p class="invoicep3"><ion-icon name="calendar"></ion-icon>&nbsp;{{pays.payment_date}} <span float-right>{{pays.payment_channel}}</span></p>
+              </ion-col>
+          </ion-row>
+          <ion-infinite-scroll (ionInfinite)="doInfinite2($event)">
+            <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."></ion-infinite-scroll-content>
+          </ion-infinite-scroll>
+          <div *ngIf="noneresult2==true"> 
+            <p style=" width: 100%; text-align: center; display: block; padding-top:10px;"><ion-icon name="md-warning" style="color:#09a546;font-size: 48px;"></ion-icon></p>
+            <p style="color: #000000; width: 100%; text-align: center; display: block; padding-top:5px; font-size:16px;font-weight:bold;">You have no payments</p>
+        </div>
+      </ion-list>
+  </div>
+</ion-content>
+<ion-footer no-padding style="height: 76px;background:#FFFFFF;">
+    <div class="fimage">
+        <img src="../../assets/imgs/4.png" >
+    </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col no-padding style="text-align: center;" (click)="dashboard()">
+                &nbsp;<img src="assets/imgs/5.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="epay1()">
+                &nbsp;<img src="assets/imgs/14.png" style="width: 45%;margin-top: -4px">
+
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="services()">
+                &nbsp;<img src="assets/imgs/15.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="promo()">
+                &nbsp;<img src="assets/imgs/16.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

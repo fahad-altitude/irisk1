@@ -1,0 +1,7 @@
+{
+  "name": "irisk",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

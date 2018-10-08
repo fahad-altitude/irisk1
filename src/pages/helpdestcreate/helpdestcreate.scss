@@ -1,0 +1,54 @@
+page-helpdestcreate {
+    ::placeholder{
+        color: #ADADAD;
+     }
+     .txt-color{
+         color:#6D6D6D;
+         border-color: #6d6d6d;
+         font-size: 15px;
+         margin-bottom: 5px;
+     }
+     .mytitle{
+        margin-left:22%;
+    }
+     .savbtn {
+        text-transform: none;
+        font-size: 15px;
+        border-radius: 0;
+        background-color: #09a546 !important;
+        // padding: 24px !important;
+       
+    }
+    .savbtn:hover {
+  
+        background-color: #09a546 !important;
+        // padding: 24px !important;
+       
+    }
+    ion-select{
+        /* width: 100%; */
+        max-width: 100%;
+        padding: 0 !important;
+        /* border: 1px solid; */
+        // border-radius: 5px;
+        text-align: left;
+        background: #ffffff !important;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0px;
+      }
+      .select-icon{
+        padding: 20px;
+        background: #3b3e3c;
+      }
+      .select-text {
+        padding: 10px;
+    }
+    .select-icon-inner{
+        left: 14px !important;
+        color: white !important;
+    }
+    ion-select button{
+        height:auto !important;
+    }
+}

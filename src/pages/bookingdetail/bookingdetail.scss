@@ -1,0 +1,51 @@
+page-bookingdetail {
+    p.para1 {
+        font-size: 15px !important;
+        margin-top: 0;
+        margin-bottom: 5px;
+        color: grey;
+        font-weight: 500;
+    }
+    p.para2 {
+        font-size: 15px !important;
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+    .mytitle{
+        margin-left:12%;
+    }
+    .scroll-content {
+        background: #eaeaea;
+        padding: 0 !important;
+    }
+    .parra1{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .parra1 span{
+        color: grey;
+    }
+    .btncncl button{
+        background: transparent;
+        color: grey;
+        border: 1px solid grey;
+    }
+    .parra2{
+        font-size: 16px;
+    }
+    .pdficon {
+        position: absolute;
+        right: 0;
+        top: -45px;
+        width: 60px;
+        height: 60px;
+        background: #eaeaea;
+        border: 2px solid white;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 0px black;
+        text-align: center;
+        padding: 10px;
+    }
+}

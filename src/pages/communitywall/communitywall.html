@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <ion-title color="white" class="mytitle">Community Wall</ion-title>
+      
+  </ion-navbar>
+</ion-header>
+<ion-content style="background:#d8d8d8;">
+    <ion-row style="background: white;padding: 10px 20px;margin: 10px;"  *ngFor="let post of post_list;">
+        <ion-col col-12 class="community_top">
+        <img src="{{post.image_url}}" alt="" style="border-radius: 100%;height: 50px;width: 50px;padding: 0;object-fit: cover;">
+        <p class="para1">{{post.posted_by}} <br><span>{{post.post_time}}</span></p>
+        </ion-col>
+        <ion-col col-12 style="margin-top: -9px" class="community_top">
+            <p class="para2">{{post.post_detail}}</p>
+        </ion-col>
+        <ion-col col-12>
+            <ion-slides slidesPerView="4">
+                <ion-slide  *ngFor="let pi of post.post_images_list;">
+                    <img   imageViewer  src="{{pi.post_image}}">
+                </ion-slide>
+            </ion-slides>
+        </ion-col>
+        <div class="notireplyy" *ngFor="let com of post.post_comments_list;">
+        <div class="sect1">
+            <img src="{{com.commented_by_imge}}" style="    width: 35px;height: 35px;border-radius: 100%;padding: 0;" alt="">
+            <p style="margin-top: 0;padding-left: 10px;width: 85%;font-weight: 700;">{{com.commented_by}} <span>{{com.insert_date}}</span> <br><span style="float:left;">{{com.comment}}</span></p>
+        </div>
+        </div>
+        <div class="notireplyy">
+            <!-- <form [formGroup]="todo" (ngSubmit)="postcomment(post.post_id)"> -->
+                <div class="col_7" >
+                    <ion-input type="text" [(ngModel)]="comment_name" required   placeholder="Comment Here......." clearInput></ion-input>
+                </div>
+                <div class="col_3"><button ion-button type="submit" (click)="postcomment(post.post_id)"><img src="../../assets/imgs/replyblack.png" alt=""></button></div>
+            <!-- </form> -->
+        </div>
+    </ion-row>
+</ion-content>
+<ion-footer no-padding style="height: 76px;background:#FFFFFF;">
+  <div class="penabs" (click)="communitypost();">
+      <img src="../../assets/imgs/penimg.png" >    
+  </div>
+ <div class="fimage">
+        <img src="../../assets/imgs/4.png" >
+    </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col no-padding style="text-align: center;" (click)="dashboard()">
+                &nbsp;<img src="assets/imgs/5.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="epay()">
+                &nbsp;<img src="assets/imgs/14.png" style="width: 45%;margin-top: -4px">
+
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="services()">
+                &nbsp;<img src="assets/imgs/15.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="promo()">
+                &nbsp;<img src="assets/imgs/16.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

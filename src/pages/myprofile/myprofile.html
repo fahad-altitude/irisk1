@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-buttons  right>
+      <button ion-button menuToggle>
+          <img src="assets/icon/side-menu.png" style="width: 50%;">
+      </button>
+        </ion-buttons>
+        <ion-title color="white" text-center>MY ACCOUNT</ion-title>
+    </ion-navbar>
+    <ion-row class="profiletop">
+      <ion-col col-4 class="profileimg">
+        <img src="{{this.profile_image}}" alt="" width="100%">
+      </ion-col>
+      <ion-col col-8 class="profileinfo">
+        <p class="para1">{{this.resident_name}}</p>
+        <p class="para2"><img src="../../assets/icon/locatt.png" alt="">Nothing in mailing address</p>
+      </ion-col>
+    </ion-row>
+</ion-header>
+<ion-content padding>
+<ion-list (click)="myprofiledetail()">
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="../../assets/icon/p1.png">
+    </ion-thumbnail>
+    <h2>My Profile</h2>
+    <button ion-button clear item-end><img src="../../assets/icon/pronext.png" alt=""></button>
+  </ion-item>
+</ion-list>
+<ion-list (click)="usermanagement()">
+<ion-item>
+  <ion-thumbnail item-start>
+    <img src="../../assets/icon/p2.png">
+  </ion-thumbnail>
+  <h2>User Management</h2>
+  <button ion-button clear item-end><img src="../../assets/icon/pronext.png" alt=""></button>
+</ion-item>
+</ion-list>
+<ion-list (click)="userinvite()">
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="../../assets/icon/p3.png">
+    </ion-thumbnail>
+    <h2>Invite Users</h2>
+    <button ion-button clear item-end><img src="../../assets/icon/pronext.png" alt=""></button>
+  </ion-item>
+</ion-list>
+<ion-list (click)="changepswd()">
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="../../assets/icon/p4.png">
+    </ion-thumbnail>
+    <h2>Change Password</h2>
+    <button ion-button clear item-end><img src="../../assets/icon/pronext.png" alt=""></button>
+  </ion-item>
+</ion-list>
+<ion-list (click)="usersos()">
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="../../assets/icon/p5.png">
+    </ion-thumbnail>
+    <h2>SOS Settings</h2>
+    <button ion-button clear item-end><img src="../../assets/icon/pronext.png" alt=""></button>
+  </ion-item>
+</ion-list>
+<ion-list  (click)="vehiclemanagement()">
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="../../assets/icon/p6.png">
+    </ion-thumbnail>
+    <h2>My Vehicles</h2>
+    <button ion-button clear item-end><img src="../../assets/icon/pronext.png" alt=""></button>
+  </ion-item>
+</ion-list>
+
+</ion-content>

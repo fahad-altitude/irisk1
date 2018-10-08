@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <ion-title color="white" class="mytitle" >Villamas</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background:#eaeaea;" >
+  <div class="slidr" >
+      <ion-slides loop="true">
+          <!-- <ion-slide *ngFor="let item of adds_list;" > -->
+          <ion-slide *ngFor="let item of slideData;" >
+              <!-- <img src="{{item.image_url}}"style="width:100%"> -->
+              <img src="{{item.image}}"style="width:100%">                
+          </ion-slide>
+      </ion-slides>
+  </div>
+  <div class="notidd"  *ngFor="let nt of notice_detail;" >
+    <div class="notidetail_top">
+      <p >
+        {{nt.title}} 
+      </p>
+      
+    </div>
+    
+    <div class="notidetail">
+            <p style="margin-top: -4px;
+            margin-right: -14px;
+            float: right;">
+                    <ion-icon name="md-calendar" ></ion-icon> {{nt.post_time | date: 'dd MMM, yyyy'}}
+                  </p>
+      <div  [innerHtml]="nt.description"></div>
+      <ion-row>
+        <ion-col col-12 class="padr padl0"   >
+            <ion-slides slidesPerView="4">
+                <ion-slide  *ngFor="let detal of notice_images;" >
+                    <img  src="{{detal.image_url}}" style="width: 100%;object-fit: cover;height: 100px;" imageViewer>
+                </ion-slide>
+            </ion-slides>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
+<ion-footer no-padding style="height: 76px;background:#FFFFFF;">
+    <div class="fimage">
+        <img src="../../assets/imgs/4.png" >
+    </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col no-padding style="text-align: center;" (click)="dashboard()">
+                &nbsp;<img src="assets/imgs/5.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="epay()">
+                &nbsp;<img src="assets/imgs/14.png" style="width: 45%;margin-top: -4px">
+
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="services()">
+                &nbsp;<img src="assets/imgs/15.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="promo()">
+                &nbsp;<img src="assets/imgs/16.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

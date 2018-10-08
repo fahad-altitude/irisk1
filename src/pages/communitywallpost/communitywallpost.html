@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title color="white" class="mytitle">Villamas</ion-title>
+        
+    </ion-navbar>
+  </ion-header>
+  <ion-content style="background:#d8d8d8;">
+    <ion-row class="disclaimer">
+      <ion-col>
+        <p><span  (click)="presentAlert()"> Disclaimer:</span>  You hereby declare and acknowledge that you have read, understood, and agreed to the <span (click)="presentAlert()">terms</span> of this service every time you make a public post.</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="disclaimer1">
+      <ion-col style="    padding: 10px 0 0 0;">
+        <div class="topsecc">
+            <img src="../../assets/imgs/imgdef.png" alt="">
+            <p>Dani Hussain</p>
+            <button ion-button icon-end>
+                Post
+                <img src="../../assets/imgs/reply2.png" alt="">
+            </button>
+        </div>
+        <div class="txtarea">
+            <ion-textarea placeholder=" What do you feel like saying?">
+               
+            </ion-textarea>
+        </div>
+        <div *ngIf="myimage!=''">
+            <img src="{{this.myimage}}" alt="" width="80px" height="80px" >
+        </div>
+        <div class="addphoto" (click)="opengallery()"><img src="../../assets/imgs/gal.png" alt="" style="padding-right: 15px;"> <span>Add Photos...</span></div>
+        <div class="addphoto" style="border-top: 0; " (click)="opencamera()"><img src="../../assets/imgs/reply1.png" alt="" style="padding-right: 15px;"><span>Camera</span> </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-content>
+<ion-footer no-padding style="height: 76px;background:#FFFFFF;">
+    <div class="fimage">
+        <img src="../../assets/imgs/4.png" >
+    </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col no-padding style="text-align: center;" (click)="dashboard()">
+                &nbsp;<img src="assets/imgs/5.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="epay()">
+                &nbsp;<img src="assets/imgs/14.png" style="width: 45%;margin-top: -4px">
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="services()">
+                &nbsp;<img src="assets/imgs/15.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="promo()">
+                &nbsp;<img src="assets/imgs/16.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

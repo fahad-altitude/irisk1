@@ -1,0 +1,44 @@
+page-servicesdetail {
+    .service_detail_row{
+        background: white;
+        padding: 10px 5px;
+        border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px grey;
+    margin-bottom: 10px;
+    }
+    .divtop img {
+        width: 50px;
+        height: 50px;
+        float: left;
+    }
+    .divtop p {
+        float: left;
+        width: 80%;
+        padding-left: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        color: green;
+        text-transform: capitalize;
+    }
+    .divtop {
+        float: left;
+        width: 100%;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #b7b5b5;
+    }
+    .divbottom {
+        float: left;
+        width: 100%;
+    }
+    .divbottom p {
+        font-weight: 700;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 0;
+        color: #807979;
+    }
+    .divbottom p span {
+        font-weight: 400;
+        padding-left: 5px;
+    }
+}

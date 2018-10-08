@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <ion-buttons  right>
+    <button ion-button menuToggle>
+        <img src="assets/icon/side-menu.png" style="width: 50%;">
+    </button>
+      </ion-buttons>
+      <ion-title color="white" text-center>USER MANAGEMENT</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding >
+  <ion-row class="usermanagement_row" >
+    <div class="tophide_div1" *ngIf="topclick==0">
+        <ion-col col-2 class="imgcol">
+            <img src="../../assets/icon/usermanagement.png" alt="">
+          </ion-col>
+          <ion-col col-8 class="txt">John Soh Chee (A-12-12)</ion-col>
+          <ion-col col-2 class="imgcolarrow" (click)="topclickbtn(1)">
+            <img src="../../assets/icon/arrowdownm.png" alt="">
+          </ion-col>
+    </div>
+    <div class="tophide_div2" *ngIf="topclick==1">
+        <ion-col col-2 class="imgcol">
+            <img src="../../assets/icon/usermanagement2.png" alt="">
+          </ion-col>
+          <ion-col col-8 class="txt" style="color:white;">John Soh Chee (A-12-12)</ion-col>
+          <ion-col col-2 class="imgcolarrow" (click)="topclickbtn(1)">
+            <img src="../../assets/icon/arrowupm.png" alt="">
+          </ion-col>
+    </div>
+    <div class="showhide_div" *ngIf="topclick==1">
+        <ion-col>
+          <img src="../../assets/icon/phonem.png" alt=""><p><a href="tel:60-4758869697"></a> 60-4758869697</p> 
+        </ion-col>
+        <ion-col>
+          <img src="../../assets/icon/emailm.png" alt=""><p><a href="mailto:60-4758869697"></a>jennifer@gmail.com</p> 
+        </ion-col>
+        <ion-col class="col_btn">
+          <button ion-button>Primary Owner</button>
+        </ion-col>
+    </div>
+    
+  </ion-row>
+  <ion-row class="usermanagement_row">
+    <ion-col col-2 class="imgcol">
+      <img src="../../assets/icon/usermanagement.png" alt="">
+    </ion-col>
+    <ion-col col-8 class="txt">John Soh Chee (A-12-12)</ion-col>
+    <ion-col col-2 class="imgcolarrow">
+      <img src="../../assets/icon/arrowdownm.png" alt="">
+    </ion-col>
+  </ion-row>
+  <ion-row class="usermanagement_row">
+    <ion-col col-2 class="imgcol">
+      <img src="../../assets/icon/usermanagement.png" alt="">
+    </ion-col>
+    <ion-col col-8 class="txt">John Soh Chee (A-12-12)</ion-col>
+    <ion-col col-2 class="imgcolarrow">
+      <img src="../../assets/icon/arrowdownm.png" alt="">
+    </ion-col>
+  </ion-row>
+    
+</ion-content>
+<ion-footer no-padding style="height: 76px;background:#FFFFFF;">
+    <div class="fimage">
+        <img src="../../assets/imgs/4.png" >
+    </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col no-padding style="text-align: center;" (click)="dashboard()">
+                &nbsp;<img src="assets/imgs/5.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="epay()">
+                &nbsp;<img src="assets/imgs/14.png" style="width: 45%;margin-top: -4px">
+
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="services()">
+                &nbsp;<img src="assets/imgs/15.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+            <ion-col no-padding style="text-align: center;" (click)="promo()">
+                &nbsp;<img src="assets/imgs/16.png" style="width: 45%;margin-top: -4px;">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

@@ -1,0 +1,133 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <ion-buttons  right>
+    <button ion-button menuToggle>
+        <img src="assets/icon/side-menu.png" style="width: 50%;">
+    </button>
+      </ion-buttons>
+      <ion-title color="white" class="mytitle"><img src="../../assets/imgs/facilitybooking.png" alt=""  style="margin-right:5px;width: 19px;">FACILITY BOOKING</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-row class="booking_select">
+    <ion-col col-12 float-left>
+        <ion-select placeholder="Select Facility " interface="popover">
+            <ion-option value="-1" selected="true">Select Facility</ion-option>
+            <ion-option value="-2" >Select1 </ion-option>
+            <ion-option value="-3" >Select2 </ion-option>
+            <ion-option value="-4" >Select3 </ion-option>
+            <ion-option value="-5" >Select4 </ion-option>
+          </ion-select>
+    </ion-col>
+  </ion-row>
+  <ion-row class="booking_detail">
+    <ion-col col-5 float-left>
+      <p>Price:<br>
+        <span>
+          RM15/Session
+        </span>
+      </p>
+    </ion-col>
+    <ion-col col-7 float-left>
+      <p>Advance Booking:<br>
+        <span>
+          Yes (Min 2 days, Max 30 days)
+        </span>
+      </p>
+    </ion-col>
+    <ion-col col-5 float-left>
+      <p>Deposit Required<br>
+        <span>Yes (RM100)</span>
+      </p>
+    </ion-col>
+    <ion-col col-7 float-left>
+      <p>Opening Hours <br>
+        <span>10:00 - 19:00</span>
+      </p>
+    </ion-col>
+    <ion-col col-12 float-left>
+      <p>Description <br>
+        <span>Located at Level 3, next to swimming pool</span>
+      </p>
+    </ion-col>
+  </ion-row>
+  <ion-row class="booking_select">
+    <ion-col col-12 float-left>
+        <ion-select placeholder="Select Booking Date" [(ngModel)]="unit_id" interface="popover">
+            <ion-option value="-1" selected="true">Select Booking Date</ion-option>
+            <ion-option value="-2" >Select1 </ion-option>
+            <ion-option value="-3" >Select2 </ion-option>
+            <ion-option value="-4" >Select3 </ion-option>
+            <ion-option value="-5" >Select4 </ion-option>
+          </ion-select>
+    </ion-col>
+  </ion-row>
+  <ion-row class="booking_avail">
+    <ion-col col-12 float-left>
+      <h3>Available Slots:</h3>
+    </ion-col>
+    <ion-col col-4 float-left>
+      <p>10:00 -11:00</p>
+    </ion-col>
+    <ion-col col-4 float-left>
+      <p>10:00 -11:00</p>
+    </ion-col>
+    <ion-col col-4 float-left>
+      <p>10:00 -11:00</p>
+    </ion-col>
+    <ion-col col-4 float-left>
+      <p>10:00 -11:00</p>
+    </ion-col>
+    <ion-col col-4 float-left>
+      <p>10:00 -11:00</p>
+    </ion-col>
+    <ion-col col-4 float-left>
+      <p>10:00 -11:00</p>
+    </ion-col>
+    <ion-col col-4 float-left>
+      <p>10:00 -11:00</p>
+    </ion-col>
+    <ion-col col-4 float-left>
+      <p>10:00 -11:00</p>
+    </ion-col>
+    <ion-col col-4 float-left>
+      <p>10:00 -11:00</p>
+    </ion-col>
+  </ion-row>
+  <ion-row class="booking_check">
+    <ion-col col-12 float-left>
+      <p>I agree to the <span style="color:#09a546;">Terms & conditions</span> </p>
+    </ion-col>
+  </ion-row>
+  <ion-row class="booking_buttons">
+      <ion-col col-6 float-left>
+        <button ion-button outline class="button1" full>CANCEL</button>
+      </ion-col>
+      <ion-col col-6 float-left>
+          <button ion-button class="button2" full (click)="bookingdetail()">CONFIRM</button>
+        </ion-col>
+    </ion-row>
+</ion-content>
+<ion-footer no-padding style="height: 76px;background:#FFFFFF;">
+  <div class="fimage">
+      <img src="../../assets/imgs/4.png" >
+  </div>
+  <ion-grid>
+      <ion-row>
+          <ion-col no-padding style="text-align: center;" (click)="dashboard()">
+              &nbsp;<img src="assets/imgs/5.png" style="width: 45%;margin-top: -4px;">
+          </ion-col>
+          <ion-col no-padding style="text-align: center;" (click)="epay()">
+              &nbsp;<img src="assets/imgs/14.png" style="width: 45%;margin-top: -4px">
+
+          </ion-col>
+          <ion-col no-padding style="text-align: center;" (click)="services()">
+              &nbsp;<img src="assets/imgs/15.png" style="width: 45%;margin-top: -4px;">
+          </ion-col>
+          <ion-col no-padding style="text-align: center;" (click)="promo()">
+              &nbsp;<img src="assets/imgs/16.png" style="width: 45%;margin-top: -4px;">
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-footer>
+

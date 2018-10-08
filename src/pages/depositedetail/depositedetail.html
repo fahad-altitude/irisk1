@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <ion-title color="white"  class="mytitle">Deposit Details</ion-title>
+  </ion-navbar>
+  <div class="top_recipt">
+    <p class="para1">
+      {{this.deposits_deail.condo_name}}
+    </p>
+    <p class="para2">Deposit Receipt</p>
+  </div>
+</ion-header>
+<ion-content style="background:#eaeaea;">
+  <div class="depositdetail">
+      <div  class="user_info">
+          <p class="para1">{{this.deposits_deail.resident_name}}</p>
+          <p class="para2">{{this.deposits_deail.resident_address}}</p>
+        </div>
+        <div  class="user_detail">
+          <div class="userdetailbox">
+              <p>Deposit Purpose:</p>
+              <p style="color:grey;">{{this.deposits_deail.deposit_reason}}</p>
+          </div>
+          <div class="userdetailbox">
+              <p>Status:</p>
+              <p style="color:#54bfe2;">{{this.deposits_deail.payment_status}}</p>
+          </div>
+          <div class="userdetailbox">
+              <p>Amount:</p>
+              <p>{{this.currency}} {{this.deposits_deail.amount}}</p>
+          </div>
+          <div class="userdetailbox">
+              <p>Payment mode:</p>
+              <p>{{this.deposits_deail.deposit_payment_mode}}</p>
+          </div>
+        </div>
+        <div  class="date_paid">
+          <p class="para1">Date Paid</p>
+          <p class="para2">{{this.deposits_deail.desposit_date}}</p>
+        </div>
+        <div class="attachment" *ngIf="this.deposits_deail.deposit_receipt">
+          <p class="para1">Attachments</p>
+          <div>
+            <img src="{{this.deposits_deail.deposit_receipt}}" alt="" imageViewer    width="80" height="80">
+          </div>
+        </div>
+  </div>
+</ion-content>

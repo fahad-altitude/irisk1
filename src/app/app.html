@@ -1,0 +1,79 @@
+<ion-menu side="right" [content]="content" class="menutop" id="menu">
+    <ion-content style="background-color: transparent;" class="menucontent">
+        <ion-list no-lines class="list menulist" style="background-color: transparent;">
+            <div class="items">
+                <img src="../assets/imgs/account.png" style="width: 7%;">
+                <p text-right (click)="gotoaccount()">
+                    My Account 
+                </p>
+            </div>
+            <div class="items" >
+                <img src="assets/icon/e-pay.png" style="width: 7%;" >
+                <p text-right (click)="gotoepay()">
+                    e-Pay(Bills & Payments)
+                </p>
+            </div>
+            <div class="items">
+                <img src="assets/icon/e-pay.png" style="width: 7%;" >
+                <p text-right (click)="gotobooking()">
+                    Facility Booking
+                </p>
+            </div>
+            <div class="items" >
+                <img src="assets/icon/visitor-reg.png" style="width: 7%;">
+                <p text-right (click)="gotovisitor()">
+                     Visitor Registration
+                </p>
+            </div>
+            <div class="items">
+                <img src="assets/icon/noticeboard.png" style="width: 7%;">
+                <p text-right (click)="gotonoticboard()">
+                    Noticeboard
+                </p>
+            </div>
+            <div class="items" >
+                <img src="assets/icon/deposits.png" style="width: 7%;" >
+                <p text-right (click)="gotodeposits()">
+                    Deposits
+                </p>
+            </div>
+            <div class="items" >
+                <img src="assets/icon/help-desk.png" style="width: 7%;">
+                <p text-right (click)="gotohelpdesk()">
+                    Help Desk
+                </p>
+            </div>
+            <div class="items" >
+                <img src="assets/icon/useful-info.png" style="width: 7%;">
+                <p text-right (click)="gotousefullinks()">
+                    Useful Info
+                </p>
+            </div>
+            <div class="items">
+                <img src="assets/icon/offers.png" style="width: 7%;" >
+                <p text-right (click)="gotopromo()">
+                    Offers & Promotions
+                </p>
+            </div>
+            <div class="items">
+                <img src="assets/icon/e-pay.png" style="width: 7%;" >
+                <p text-right (click)="gotohelp()">
+                     Help
+                </p>
+            </div>
+            <div class="items">
+                <img src="assets/icon/offers.png" style="width: 7%;">
+                <p text-right (click)="gotoswitch()">
+                    Switch Account
+                </p>
+            </div>
+            <div class="items">
+                <img src="assets/icon/logout.png" style="width: 7%;"/>
+                <p text-right (click)="gotologout()">
+                    Logout
+                </p>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content></ion-nav>

@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <ion-buttons  right>
+    <button ion-button menuToggle>
+        <img src="assets/icon/side-menu.png" style="width: 50%;">
+    </button>
+      </ion-buttons>
+      <ion-title color="white" text-center>INVITE USER</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding >
+  <ion-row>
+    <ion-col col-12 class="top_invite">
+      <img src="../../assets/icon/important.png" alt="">Important
+    </ion-col>
+    <ion-col col-12 class="imptxt_invite">
+      <p>Please enter the correct email addresses of users that you wish to invite. Invited users mustc be residing in this property. Other than official property owners, invitation to users who are NOT residing in this property is strictly prohibited</p>
+    </ion-col>
+  </ion-row>
+  <div class="changepswddiv">
+      <ion-item>
+          <ion-label color="primary" stacked>Name</ion-label>
+          <ion-input type="password" [(ngModel)]="old_password" placeholder="Enter name of user"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" stacked>Phone</ion-label>
+          <ion-input type="password" [(ngModel)]="new_password" placeholder="Enter phone number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" stacked>Email</ion-label>
+          <ion-input type="password" [(ngModel)]="re_password" placeholder="example@gmail.com"></ion-input>
+        </ion-item>
+        <ion-item class="radioitem">
+            <div float-left class="radiobtn">
+              <input type="radio" name="gender" value="male" float-left ><p float-left style="color: black;font-weight: 500;">Owner</p>
+            </div>
+            <div float-left class="radiobtn">
+              <input type="radio" name="gender" value="female" float-left><p float-left style="color: black;font-weight: 500;">Tenant</p> 
+            </div>
+            
+        </ion-item>
+        <ion-col col-6 float-left>
+            <button (click)="sendchangepassword()" ion-button full class="btnstyling" style="background-color: #a19f9f !important;">CANCEL</button>
+        </ion-col>
+        <ion-col col-6 float-left>
+            <button (click)="sendchangepassword()" ion-button full class="btnstyling">INVITE USER</button>
+        </ion-col>
+        
+  </div>
+</ion-content>
+<ion-footer no-padding style="height: 76px;background:#FFFFFF;">
+  <div class="plusicon">
+      <ion-icon name="ios-add" (click)="gotoadd_deposit()" style="color: white;font-size: 40px;"></ion-icon>
+  </div>
+  <div class="fimage">
+      <img src="../../assets/imgs/4.png" >
+  </div>
+  <ion-grid>
+      <ion-row>
+          <ion-col no-padding style="text-align: center;" (click)="dashboard()">
+              &nbsp;<img src="assets/imgs/5.png" style="width: 45%;margin-top: -4px;">
+          </ion-col>
+          <ion-col no-padding style="text-align: center;" (click)="epay()">
+              &nbsp;<img src="assets/imgs/14.png" style="width: 45%;margin-top: -4px">
+
+          </ion-col>
+          <ion-col no-padding style="text-align: center;" (click)="services()">
+              &nbsp;<img src="assets/imgs/15.png" style="width: 45%;margin-top: -4px;">
+          </ion-col>
+          <ion-col no-padding style="text-align: center;" (click)="promo()">
+              &nbsp;<img src="assets/imgs/16.png" style="width: 45%;margin-top: -4px;">
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-footer>

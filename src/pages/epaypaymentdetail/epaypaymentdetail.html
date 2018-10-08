@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <ion-title color="white" class="mytitle">Payment Details</ion-title>
+  </ion-navbar>
+  <div class="top_recipt">
+    <div style="float: left;width: 50%"  *ngFor="let pays of payment_items_list;" >
+        <p class="para1">
+            ID# {{pays.system_transaction_id}}
+          </p>
+          <p class="para2">{{pays.payment_amount}}</p>
+    </div>
+    <div style="float: left; width: 50%;text-align: right;">
+     <a href="{{this.payment_deail.pdf_link}}"> <img src="../../assets/imgs/pdficon.png" alt=""></a>
+    </div>
+  </div>
+</ion-header>
+<ion-content style="background:#eaeaea;">
+    <div  class="user_info">
+        <div class="invoicedate"  *ngFor="let pay of payment_items_list;" >
+            <p class="para1">Paid on</p>
+            <p class="para2"><ion-icon name="calendar"></ion-icon>&nbsp;{{pay.payment_date}}</p>
+        </div>
+        <div class="invoicedate"   *ngFor="let pa of payment_items_list;" >
+            <p class="para1">Payment Method</p>
+            <p class="para2">{{pa.payment_channel}}</p>
+        </div>
+      <div style="background: #eaeaea; float: left; width: 100%;padding: 10px;margin-bottom: 10px;">
+          <p class="para1">{{this.payment_deail.resident_name}}</p>
+          <p class="para2" style="color: #4e4c4c;">{{this.payment_deail.resident_address}} </p>
+      </div>
+      <p   *ngFor="let inv of invoice_items_list;" style="padding-top: 15px;padding-bottom: 15px;border-top: 1px solid grey;color: black;">{{inv.description}} <span float-right style="color:#000;">{{inv.amount}}</span></p>
+      <span *ngIf="this.payment_deail.discount_amount!=0">
+      <p text-right *ngIf="this.payment_deail.discount_type==1" style="padding-top: 15px;padding-bottom: 15px;border-bottom: 1px solid #eaeaea;background-color:#eaeaea;width: 55%;margin-left: 45%;margin-bottom: 9px;">Adjustments {{this.payment_deail.discount_amount}}%</p>   
+      <p text-right *ngIf="this.payment_deail.discount_type==0" style="padding-top: 15px;padding-bottom: 15px;border-bottom: 1px solid #eaeaea;background-color:#eaeaea;width: 55%;margin-left: 45%;margin-bottom: 9px;">Adjustments {{this.payment_deail.discount_amount}}</p>  
+      </span>   
+      <p text-right  *ngFor="let pyy of payment_items_list;" style="padding-top: 15px;padding-bottom: 15px;border-bottom: 1px solid grey;background-color:grey;width: 55%;margin-left: 45%;">Total {{pyy.payment_amount}}</p>
+    </div>
+</ion-content>
