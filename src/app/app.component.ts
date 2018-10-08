@@ -4,12 +4,8 @@ import {Platform,App,Events} from 'ionic-angular';
 import { MenuController } from 'ionic-angular';
 import { RestProvider } from '../providers/rest/rest';
 import { Http} from '@angular/http';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-
-
 import { BookingPage } from '../pages/booking/booking';
 import { CommunityPage } from '../pages/community/community';
 import { CommunitywallPage } from '../pages/communitywall/communitywall';
@@ -67,10 +63,14 @@ export class MyApp {
     platform.ready().then(() => {
       statusBar.styleDefault();
       this.url='http://staging.irisk.my/api/v3/';
+      this.moduleasign();
       if(window.localStorage.getItem('is_login')=="yes"){
         // this.splashScreen.hide();
         this.app.getRootNav().setRoot(DashboardPage);
       }
+      events.subscribe('user:login', () => {
+        this.moduleasign();
+      });
     });
   }
   moduleasign(){
