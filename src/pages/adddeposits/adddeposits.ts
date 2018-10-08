@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import {NavController, NavParams, Platform, AlertController, LoadingController, App, ModalController } from 'ionic-angular';
-// import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
-// import { File } from '@ionic-native/file';
 import { RestProvider } from '../../providers/rest/rest';
 import { DepositsPage } from '../deposits/deposits';
-// import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Http} from '@angular/http';
-// import { normalizeURL } from 'ionic-angular';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { File } from '@ionic-native/file';
@@ -14,35 +10,17 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
-
 // @IonicPage()
 @Component({
   selector: 'page-adddeposits',
   templateUrl: 'adddeposits.html'
 })
 export class AdddepositsPage {
-
 public myimage:any;
 public url:any;
-public imgurl:any;
 public reason:any;
 public amount:any;
 public headers:any;
-public imageurl=[];
-slideOneForm: FormGroup;
-public burlimg: any;
-public burl: any;
-public base64Image:any;
-submitAttempt: boolean = false;
-imagebag = []; //for normal url
-imagebag64 = []; // for base64 img for front end preview
-imagebagname = []; //for image name
-subscription: any;
-slotdates:any;
-content:any;
-userid:any='';
-urlpic:any='';
-showimg:any;
 constructor(
   public navCtrl: NavController, 
   public navParams: NavParams,
@@ -60,11 +38,7 @@ constructor(
   private modalCtrl: ModalController
   ) 
 {
-  this.content = '';
-  this.base64Image = '';
-  this.burl = '';
-  this.burlimg = '';
-  this.slotdates = [];
+ 
   this.url='http://staging.irisk.my/api/v3/';
   this.myimage = '';
 }
@@ -143,46 +117,13 @@ camerafn(){
     this.myimage = imagePath;
     this.showimg=imagePath;
     this.myimage = 'data:image/jpeg;base64,' + imagePath;
-    console.log('this.imgurl', this.myimage);
+
   }, (err) => {
   });
 }
 click_on_cancel_button(){
   this.navCtrl.pop();
 }
-// uploadimg(){
-//   this.userid=window.localStorage.getItem('token');
-//   console.log('upload img funtion::::',this.userid);
-//     const fileTransfer: FileTransferObject = this.transfer.create();
-//     let options: FileUploadOptions = {
-//       fileKey: 'image-file',
-//       fileName: this.userid+'.png',
-//       chunkedMode: false,
-//       mimeType: "image/png",
-//       headers: {}
-//     }
-//     console.log('this.imageURI ::: sadsd:',this.myimage);
-//     console.log('options',options);
-//     this.urlpic='http://staging.irisk.my/assets/uploads/deposit_files/deposit_receipts/';
-//     // +this.userid+'.png'
-//     console.log('this.imageURI ::::',this.urlpic);
-//     fileTransfer.upload(this.myimage, this.urlpic, options)
-//       .then((data) => {
-//       let p_data = JSON.parse(data.response);
-//       console.log('responseeesdadsaee:::: thenthen',p_data);
-//       if(p_data.code==404){
-//       console.log('responseeesdadsaee:::: ifif',p_data);
-//       }
-//       else{
-//         console.log(p_data);
-//         this.myimage='';
-//         console.log('responseeesdadsaee:::: elseelse',p_data);
-//       }
-//     }, (err) => {
-//       console.log(err);
-//       console.log('The image cannot be uploaded. Please try again.',err);
-//     });
-//   // });
-// }
+
 slideData = [{ image: "../../assets/imgs/1.jpg" },{ image: "../../assets/imgs/1.jpg" }] 
 }
