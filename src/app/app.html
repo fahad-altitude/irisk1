@@ -7,49 +7,49 @@
                     My Account 
                 </p>
             </div>
-            <div class="items" >
+            <div class="items"  *ngIf="this.epay_module!=null && this.epay_module!=''">
                 <img src="assets/icon/e-pay.png" style="width: 7%;" >
                 <p text-right (click)="gotoepay()">
                     e-Pay(Bills & Payments)
                 </p>
             </div>
-            <div class="items">
+            <div class="items" *ngIf="this.booking_module!=null && this.booking_module!=''">
                 <img src="assets/icon/e-pay.png" style="width: 7%;" >
                 <p text-right (click)="gotobooking()">
                     Facility Booking
                 </p>
             </div>
-            <div class="items" >
+            <div class="items" *ngIf="this.visitors_module!=null && this.visitors_module!=''">
                 <img src="assets/icon/visitor-reg.png" style="width: 7%;">
                 <p text-right (click)="gotovisitor()">
                      Visitor Registration
                 </p>
             </div>
-            <div class="items">
+            <div class="items" *ngIf="this.noticeboard_module!=null && this.noticeboard_module!=''">
                 <img src="assets/icon/noticeboard.png" style="width: 7%;">
                 <p text-right (click)="gotonoticboard()">
                     Noticeboard
                 </p>
             </div>
-            <div class="items" >
+            <div class="items" *ngIf="this.deposits_module!=null && this.deposits_module!=''">
                 <img src="assets/icon/deposits.png" style="width: 7%;" >
                 <p text-right (click)="gotodeposits()">
                     Deposits
                 </p>
             </div>
-            <div class="items" >
+            <div class="items"  *ngIf="this.helpdesk_module!=null && this.helpdesk_module!=''">
                 <img src="assets/icon/help-desk.png" style="width: 7%;">
                 <p text-right (click)="gotohelpdesk()">
                     Help Desk
                 </p>
             </div>
-            <div class="items" >
+            <div class="items"  *ngIf="this.usefullink_module!=null && this.usefullink_module!=''">
                 <img src="assets/icon/useful-info.png" style="width: 7%;">
                 <p text-right (click)="gotousefullinks()">
                     Useful Info
                 </p>
             </div>
-            <div class="items">
+            <div class="items"  *ngIf="this.offerspromos_module!=null && this.offerspromos_module!=''">
                 <img src="assets/icon/offers.png" style="width: 7%;" >
                 <p text-right (click)="gotopromo()">
                     Offers & Promotions
