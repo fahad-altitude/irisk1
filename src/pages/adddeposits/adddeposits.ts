@@ -4,12 +4,8 @@ import { RestProvider } from '../../providers/rest/rest';
 import { DepositsPage } from '../deposits/deposits';
 import { Http} from '@angular/http';
 import { ImagePicker } from '@ionic-native/image-picker';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { File } from '@ionic-native/file';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
-import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 // @IonicPage()
 @Component({
   selector: 'page-adddeposits',
@@ -25,16 +21,13 @@ constructor(
   public navCtrl: NavController, 
   public navParams: NavParams,
   private camera: Camera, 
-  private base64ToGallery: Base64ToGallery, 
-  private imagePicker: ImagePicker, 
-  private file: File, 
+  private imagePicker: ImagePicker,  
   private photoViewer: PhotoViewer,
   public platform: Platform,
   public alertCtrl: AlertController, 
   public http:Http, 
   public loadingCtrl: LoadingController,
   private app: App, 
-  private transfer: FileTransfer, 
   private modalCtrl: ModalController
   ) 
 {
